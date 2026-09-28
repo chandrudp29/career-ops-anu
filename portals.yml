@@ -119,12 +119,20 @@ tracked_companies:
     notes: "Large global board (701 jobs) with a Bengaluru presence. Confirmed live Greenhouse board 2026-09-28. Filter noise expected — most roles are eng/global."
     enabled: true
 
+  - name: Salesforce
+    careers_url: https://salesforce.wd12.myworkdayjobs.com/External_Career_Site
+    notes: "Workday (auto-detected from careers_url — no separate api: needed for this provider). Confirmed live 2026-09-28 via the wday/cxs endpoint (wd1 404s, wd12 is the real tenant instance). Large global board; has a real India/Hyderabad presence in sample results, Bengaluru legal roles not yet confirmed but worth tracking given company size."
+    enabled: true
+
   # Checked and NOT usable (2026-09-28): Freshworks' Lever board resolves
   # (HTTP 200) but returns 0 jobs — likely migrated off Lever; excluded until
-  # re-verified. Not yet mapped to Greenhouse/Lever/Ashby by direct API check:
-  # Swiggy, Flipkart, Zerodha, ICON plc, Salesforce, Nutanix, Atlassian,
-  # Walmart Global Tech, Intuit, Zomato, Byju's, Unacademy, Nykaa, Lenskart,
-  # Urban Company, Cars24, Delhivery, Chargebee, Postman, BrowserStack,
-  # ClevertTap, Whatfix, Darwinbox — likely custom ATS (Workday, in-house,
-  # etc). Add via websearch fallback (scan_method: websearch) if wanted, but
-  # note those results carry the same staleness risk flagged earlier.
+  # re-verified. Confirmed on Workday but exact tenant/site not yet found
+  # (server responds, wrong site path guessed): Atlassian, Nutanix, Walmart
+  # Global Tech, Intuit — need their real careers_url (visit the site, copy
+  # the myworkdayjobs.com link) rather than guessing the site slug. Not yet
+  # mapped to any ATS by direct check: Swiggy, Flipkart, Zerodha, ICON plc,
+  # Zomato, Byju's, Unacademy, Nykaa, Lenskart, Urban Company, Cars24,
+  # Delhivery, Chargebee, Postman, BrowserStack, ClevertTap, Whatfix,
+  # Darwinbox — likely custom ATS or in-house. Add via websearch fallback
+  # (scan_method: websearch) if wanted, but note those results carry the
+  # same staleness risk flagged earlier in this file's history.
