@@ -45,3 +45,15 @@ timestamp	company	status
 2026-09-28T09:55:53.378Z	Porter	auth
 2026-09-28T09:55:53.378Z	Bounce	auth
 2026-09-28T09:55:53.378Z	Stripe	auth
+2026-09-28T10:08:24.215Z	PhonePe	slug_gone
+2026-09-28T10:08:24.215Z	Razorpay	reachable
+2026-09-28T10:08:24.215Z	Groww	reachable
+2026-09-28T10:08:24.215Z	CRED	reachable
+2026-09-28T10:08:24.215Z	Paytm	reachable
+2026-09-28T10:08:24.215Z	Navi	reachable
+2026-09-28T10:08:24.215Z	Slice	reachable
+2026-09-28T10:08:24.215Z	FamPay	reachable
+2026-09-28T10:08:24.215Z	Meesho	reachable
+2026-09-28T10:08:24.215Z	Porter	reachable
+2026-09-28T10:08:24.215Z	Bounce	reachable
+2026-09-28T10:08:24.215Z	Stripe	reachable
