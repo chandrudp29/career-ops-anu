@@ -16,6 +16,9 @@ title_filter:
     - "Compliance Manager"    # added 2026-09-28 — caught Meesho's Associate
                               # Compliance Manager, which "Compliance Counsel"
                               # alone missed during the unfiltered audit
+    - "Privacy Counsel"       # added 2026-09-28 — matches her CIPP/data-privacy
+    - "Data Protection Officer"
+    - "Privacy Manager"
   negative:
     - "General Counsel"
     - "Chief Legal"
@@ -43,8 +46,8 @@ tracked_companies:
   - name: PhonePe
     careers_url: https://job-boards.greenhouse.io/phonepe
     api: https://boards-api.greenhouse.io/v1/boards/phonepe/jobs
-    notes: "Bengaluru. Fintech. Board currently returning errors on direct fetch (2026-09-28) — see verify-portals.mjs."
-    enabled: true
+    notes: "DISABLED 2026-09-28 after 4+ consecutive failed runs. Board fully 404s (not rate-limited) on both the HTML board and JSON API; checked Lever/Ashby/SmartRecruiters for a migrated slug and web-searched for a current board link — nothing resolves. Likely pulled their public ATS board or moved somewhere not yet identified. Re-enable if a working board is found."
+    enabled: false
 
   - name: Razorpay
     careers_url: https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited
