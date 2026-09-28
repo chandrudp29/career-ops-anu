@@ -1,0 +1,74 @@
+# Career-Ops Profile Configuration — Anu C Nanda
+# Built from her resume (Anu_Nanda_Legal_Counsel_Bangalore_new 1.pdf, provided 2026-08-07).
+# Updated 2026-09-28: resume repositioned toward Data Privacy/Technology
+# Transactions as co-primary specializations (CIPP certification added; see
+# cv.md). target_roles/narrative below updated to match — keep these two
+# files in sync, since evaluations score against this file, not cv.md text.
+
+candidate:
+  full_name: "Anu C Nanda"
+  email: "anucnanda@gmail.com"
+  phone: "+91 9900850650"
+  location: "Bengaluru, India (Open to Bengaluru & Hybrid roles)"
+  linkedin: "linkedin.com/in/anu-c-nanda-04269a179"
+  portfolio_url: ""
+  github: ""
+  twitter: ""
+  photo: ""
+
+target_roles:
+  primary:
+    - "Legal Counsel"
+    - "Corporate Counsel"
+    - "Commercial Counsel"
+    - "Data Privacy Counsel"
+    - "Technology Transactions Counsel"
+  archetypes:
+    - name: "In-house Commercial Contracts / Technology Transactions Counsel"
+      level: "Associate Counsel / Counsel I-II (2-5 yr PQE)"
+      fit: "primary"
+    - name: "Data Privacy / DPDP-GDPR Compliance Counsel"
+      level: "Associate Counsel / Counsel I-II (2-5 yr PQE)"
+      fit: "primary"
+    - name: "Legal & Compliance Associate"
+      level: "Mid"
+      fit: "secondary"
+    - name: "Legal & Company Secretarial"
+      level: "Mid (has functional CS experience, not ICSI-certified)"
+      fit: "adjacent"
+
+narrative:
+  headline: "Legal Counsel | Commercial Contracts · Technology Agreements · Data Privacy & Compliance"
+  exit_story: "~3 years PQE, including 1.5+ years in-house at Eurofins Advinus (a multinational CRO spanning India, Europe, US and APAC). Drafts and negotiates CDAs, MSAs, SOWs, SaaS/IT services and vendor agreements end-to-end; owns contract lifecycle management on an enterprise CMS; reviews technology and data-processing contracts for DPDP Act 2023, GDPR-fundamentals and cross-border-transfer compliance; CIPP-certified. Prior civil/commercial litigation practice before Bengaluru civil courts and the Karnataka High Court. Enrolled Advocate, Bar Council of Karnataka."
+  superpowers:
+    - "CIPP-certified data privacy expertise: DPDP Act 2023, GDPR fundamentals, cross-border data transfer, privacy governance"
+    - "Technology transaction drafting: SaaS/IT services/cloud services agreements, data processing agreements (DPAs), SLAs"
+    - "Commercial contract drafting & negotiation (CDAs, MSAs, SOWs, vendor agreements)"
+    - "End-to-end contract lifecycle management (CMS: intake -> redline -> execution -> renewal)"
+    - "Multinational counterparty experience (India, Europe, US and APAC via a CRO)"
+  proof_points:
+    - name: "Eurofins Advinus India — Senior Associate, Legal & Company Secretarial (Dec 2024-Present)"
+      url: ""
+      hero_metric: "Manages end-to-end contract lifecycle on enterprise CMS, materially reducing missed-renewal exposure across the portfolio; reviews technology/data-processing contracts for DPDP Act 2023 and cross-border-transfer compliance"
+    - name: "DNM & Associates — Senior Associate, Litigation & Corporate Transactions (Oct 2023-Nov 2024)"
+      url: ""
+      hero_metric: "Independently managed civil/commercial/consumer/family dispute matters before the Karnataka High Court"
+
+compensation:
+  target_range: "INR 18.5L-24.0L"   # Bengaluru in-house Legal Counsel benchmark, per SalaryAsk (2026-08)
+  currency: "INR"
+  minimum: "INR 15L"
+  location_flexibility: "Bengaluru or hybrid; not seeking remote-only roles or relocation outside Bengaluru"
+
+location:
+  country: "India"
+  city: "Bengaluru"
+  timezone: "IST"
+  visa_status: "N/A — Indian national, India-based roles only"
+
+cv:
+  output_format: "html"
+
+cover_letter:
+  notice_period_days: 30   # placeholder — confirm her actual current notice period before sending
+  primary_domain: "Commercial contracts, technology transactions and data privacy law (CRO/MNC in-house)"

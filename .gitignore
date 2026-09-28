@@ -1,0 +1,30 @@
+# This is a PRIVATE, personal instance of career-ops for Anu's job search —
+# unlike the public santifer/career-ops template, this repo's whole purpose
+# is to persist her real data (cv.md, config/profile.yml, portals.yml,
+# data/*, reports/*) so the scheduled cloud routine can read and update it
+# across runs. Only truly ephemeral/regenerable artifacts are excluded here.
+
+node_modules/
+.env
+.DS_Store
+*.mov
+*.mp4
+*.bak*
+*.tmp*
+*.db-wal
+*.db-shm
+.tmp-script-test-*/
+.playwright-mcp/
+test-results/
+playwright-report/
+.idea/
+.vscode/
+.claude/settings.local.json
+.claude/memory/
+.opencode/settings.local.json
+.opencode/memory/
+career-dashboard
+career-dashboard.exe
+.career-ops-web/
+plan/
+reports/*-RESERVED.md

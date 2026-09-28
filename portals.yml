@@ -1,0 +1,127 @@
+# Portal Scanner Configuration — Anu C Nanda (Legal Counsel search)
+# Isolated, standalone install: run with `node scan.mjs` from inside
+# career-ops-anu/ — data/scan-history.tsv and data/pipeline.md are local here.
+# Board tokens below were verified directly against live Greenhouse/Lever/Ashby
+# JSON APIs (curl HTTP 200 + non-empty job list), not from search-engine
+# snippets or aggregator blogs, which we found to be months stale.
+
+title_filter:
+  positive:
+    - "Legal Counsel"
+    - "Corporate Counsel"
+    - "Commercial Counsel"
+    - "Legal"
+    - "Company Secretary"
+    - "Compliance Counsel"
+    - "Compliance Manager"    # added 2026-09-28 — caught Meesho's Associate
+                              # Compliance Manager, which "Compliance Counsel"
+                              # alone missed during the unfiltered audit
+  negative:
+    - "General Counsel"
+    - "Chief Legal"
+    - "Chief Compliance"
+    - "VP"
+    - "Vice President"
+    - "Head of Legal"
+    - "Executive"
+    - "Intern"
+    - "Paralegal Intern"
+
+location_filter:
+  always_allow:
+    - "Bengaluru"
+    - "Bangalore"
+  allow:
+    - "Bengaluru"
+    - "Bangalore"
+    - "Hybrid"
+    - "India"
+
+tracked_companies:
+  # -- Fintech / payments --
+
+  - name: PhonePe
+    careers_url: https://job-boards.greenhouse.io/phonepe
+    api: https://boards-api.greenhouse.io/v1/boards/phonepe/jobs
+    notes: "Bengaluru. Fintech. Board currently returning errors on direct fetch (2026-09-28) — see verify-portals.mjs."
+    enabled: true
+
+  - name: Razorpay
+    careers_url: https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited
+    api: https://boards-api.greenhouse.io/v1/boards/razorpaysoftwareprivatelimited/jobs
+    notes: "Bengaluru. Fintech. Confirmed live Greenhouse board 2026-09-28."
+    enabled: true
+
+  - name: Groww
+    careers_url: https://job-boards.greenhouse.io/groww
+    api: https://boards-api.greenhouse.io/v1/boards/groww/jobs
+    notes: "Bengaluru. Fintech/broking. Confirmed live Greenhouse board 2026-09-28."
+    enabled: true
+
+  - name: CRED
+    careers_url: https://jobs.lever.co/cred
+    api: https://api.lever.co/v0/postings/cred
+    notes: "Bengaluru. Fintech. Confirmed live Lever board 2026-09-28."
+    enabled: true
+
+  - name: Paytm
+    careers_url: https://jobs.lever.co/paytm
+    api: https://api.lever.co/v0/postings/paytm
+    notes: "Bengaluru/Noida. Fintech, 172 open jobs. Confirmed live Lever board 2026-09-28."
+    enabled: true
+
+  - name: Navi
+    careers_url: https://jobs.ashbyhq.com/navi
+    api: https://api.ashbyhq.com/posting-api/job-board/navi
+    notes: "Bengaluru. Fintech. Small board (3 jobs) but confirmed live Ashby 2026-09-28."
+    enabled: true
+
+  - name: Slice
+    careers_url: https://job-boards.greenhouse.io/slice
+    api: https://boards-api.greenhouse.io/v1/boards/slice/jobs
+    notes: "Bengaluru. Fintech, 27 open jobs. Confirmed live Greenhouse board 2026-09-28."
+    enabled: true
+
+  - name: FamPay
+    careers_url: https://jobs.lever.co/fampay
+    api: https://api.lever.co/v0/postings/fampay
+    notes: "Bengaluru. Fintech, 15 open jobs. Confirmed live Lever board 2026-09-28."
+    enabled: true
+
+  # -- E-commerce / consumer / logistics --
+
+  - name: Meesho
+    careers_url: https://jobs.lever.co/meesho
+    api: https://api.lever.co/v0/postings/meesho
+    notes: "Bengaluru. E-commerce. Confirmed live Lever board 2026-09-28."
+    enabled: true
+
+  - name: Porter
+    careers_url: https://jobs.lever.co/porter
+    api: https://api.lever.co/v0/postings/porter
+    notes: "Bengaluru. Logistics, 26 open jobs on Lever (a separate Greenhouse board also exists but is much smaller/likely legacy). Confirmed live 2026-09-28."
+    enabled: true
+
+  - name: Bounce
+    careers_url: https://jobs.ashbyhq.com/bounce
+    api: https://api.ashbyhq.com/posting-api/job-board/bounce
+    notes: "Bengaluru. Mobility. Small board (6 jobs) but confirmed live Ashby 2026-09-28."
+    enabled: true
+
+  # -- Global product company with a large Bengaluru GCC --
+
+  - name: Stripe
+    careers_url: https://job-boards.greenhouse.io/stripe
+    api: https://boards-api.greenhouse.io/v1/boards/stripe/jobs
+    notes: "Large global board (701 jobs) with a Bengaluru presence. Confirmed live Greenhouse board 2026-09-28. Filter noise expected — most roles are eng/global."
+    enabled: true
+
+  # Checked and NOT usable (2026-09-28): Freshworks' Lever board resolves
+  # (HTTP 200) but returns 0 jobs — likely migrated off Lever; excluded until
+  # re-verified. Not yet mapped to Greenhouse/Lever/Ashby by direct API check:
+  # Swiggy, Flipkart, Zerodha, ICON plc, Salesforce, Nutanix, Atlassian,
+  # Walmart Global Tech, Intuit, Zomato, Byju's, Unacademy, Nykaa, Lenskart,
+  # Urban Company, Cars24, Delhivery, Chargebee, Postman, BrowserStack,
+  # ClevertTap, Whatfix, Darwinbox — likely custom ATS (Workday, in-house,
+  # etc). Add via websearch fallback (scan_method: websearch) if wanted, but
+  # note those results carry the same staleness risk flagged earlier.
